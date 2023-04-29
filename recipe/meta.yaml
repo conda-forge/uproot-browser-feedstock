@@ -1,5 +1,5 @@
 {% set name = "uproot-browser" %}
-{% set version = "0.4.2" %}
+{% set version = "0.5.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/uproot_browser-{{ version }}.tar.gz
-  sha256: 5a0febc0036e6edbce5fd82040b736d5750f2267fe39670a0fa8c43c964fec2e
+  sha256: 78ef29379943a52c9458259cf83e4d31b8a83d7426579173334f3410b6e05af5
 
 build:
   number: 0
