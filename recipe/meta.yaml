@@ -26,6 +26,7 @@ requirements:
   run:
     - awkward >=1
     - click >=8
+    - click-default-group
     - hist >=2.4
     - lz4
     - numpy >=1.13.3
