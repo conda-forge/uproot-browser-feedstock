@@ -1,5 +1,6 @@
 {% set name = "uproot-browser" %}
 {% set version = "0.7.2" %}
+{% set python_min = "3.8" %}
 
 
 package:
@@ -20,7 +21,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - hatchling
     - hatch-vcs
   run:
@@ -31,7 +32,7 @@ requirements:
     - lz4
     - numpy >=1.13.3
     - plotext >=5.2.7
-    - python >=3.8
+    - python >={{ python_min }}
     - rich >=13.3.3
     - textual >=0.18
     - typing_extensions
@@ -48,6 +49,7 @@ test:
     - uproot-browser plot uproot-Event.root:hstat
     - pytest
   requires:
+    - python {{ python_min }}
     - pip
     - pytest >=6
     - pytest-asyncio
