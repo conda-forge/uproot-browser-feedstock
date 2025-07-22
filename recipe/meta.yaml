@@ -41,6 +41,7 @@ requirements:
 test:
   source_files:
     - tests
+    - pyproject.toml
   imports:
     - uproot_browser
   commands:
