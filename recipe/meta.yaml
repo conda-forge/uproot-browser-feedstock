@@ -25,16 +25,16 @@ requirements:
     - hatchling
     - hatch-vcs
   run:
-    - awkward >=1
+    - awkward >=2
     - click >=8
     - click-default-group >=1.2
     - hist >=2.4
-    - lz4
-    - numpy >=1.13.3
-    - plotext >=5.2.7
+    - lz4 >=2
+    - numpy >=1.18
+    - plotext >=5.2.8
     - python >={{ python_min }}
     - rich >=13.3.3
-    - textual >=0.18
+    - textual >=0.86
     - typing_extensions
     - uproot >=5
 
