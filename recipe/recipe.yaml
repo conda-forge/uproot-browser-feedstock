@@ -22,7 +22,7 @@ build:
 requirements:
   host:
     - pip
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - hatchling
     - hatch-vcs
   run:
