@@ -1,6 +1,6 @@
 {% set name = "uproot-browser" %}
-{% set version = "0.7.2" %}
-{% set python_min = "3.8" %}
+{% set version = "0.8.0" %}
+{% set python_min = "3.9" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/uproot_browser-{{ version }}.tar.gz
-  sha256: e094053b8e2b870dffc401d5039cd7251c2baecaadd90c3944af6d8d5d72fd69
+  sha256: f80732d1297e46b0ef4f2c8e513df123494820e987c43532449bdfcb1b4d5d1d
 
 build:
   number: 0
@@ -25,22 +25,23 @@ requirements:
     - hatchling
     - hatch-vcs
   run:
-    - awkward >=1
+    - awkward >=2
     - click >=8
     - click-default-group >=1.2
     - hist >=2.4
-    - lz4
-    - numpy >=1.13.3
-    - plotext >=5.2.7
+    - lz4 >=2
+    - numpy >=1.18
+    - plotext >=5.2.8
     - python >={{ python_min }}
     - rich >=13.3.3
-    - textual >=0.18
+    - textual >=0.86
     - typing_extensions
     - uproot >=5
 
 test:
   source_files:
     - tests
+    - pyproject.toml
   imports:
     - uproot_browser
   commands:
@@ -51,9 +52,9 @@ test:
   requires:
     - python {{ python_min }}
     - pip
-    - pytest >=6
+    - pytest >=8
     - pytest-asyncio
-    - scikit-hep-testdata
+    - scikit-hep-testdata >=0.4.10
 
 about:
   home: https://pypi.org/project/uproot-browser/
