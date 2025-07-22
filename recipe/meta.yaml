@@ -52,9 +52,9 @@ test:
   requires:
     - python {{ python_min }}
     - pip
-    - pytest >=6
+    - pytest >=8
     - pytest-asyncio
-    - scikit-hep-testdata
+    - scikit-hep-testdata >=0.4.10
 
 about:
   home: https://pypi.org/project/uproot-browser/
