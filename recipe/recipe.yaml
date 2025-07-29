@@ -37,7 +37,7 @@ requirements:
     - rich >=13.3.3
     - textual >=0.86
     - typing_extensions
-    - uproot >=5
+    - uproot >=5.6.1
 
 tests:
   - python:
@@ -55,10 +55,9 @@ tests:
         - pip
         - pytest >=8
         - pytest-asyncio
-        - scikit-hep-testdata >=0.4.10
+        - scikit-hep-testdata >=0.5
     script:
-      - curl -LO https://github.com/scikit-hep/scikit-hep-testdata/raw/v0.4.12/src/skhep_testdata/data/uproot-Event.root
-      - uproot-browser plot uproot-Event.root:hstat
+      - uproot-browser plot --testdata uproot-Event.root:hstat
       - pytest
 
 about:
