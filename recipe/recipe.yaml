@@ -1,6 +1,6 @@
 context:
   name: uproot-browser
-  version: "0.8.1"
+  version: "0.8.2"
   python_min: '3.9'
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/uproot_browser-${{ version }}.tar.gz
-  sha256: 6846d659bdbfcb04f08cd7a99fda4e4a5f1182fa23d3c6af76f20e1cc53fcd98
+  sha256: 26a68f2786e7810862715b0f85992463d444fb065fd8c6906f85b0a06c4008cd
 
 build:
   number: 0
@@ -37,7 +37,7 @@ requirements:
     - rich >=13.3.3
     - textual >=0.86
     - typing_extensions
-    - uproot >=5
+    - uproot >=5.6.1
 
 tests:
   - python:
@@ -55,10 +55,9 @@ tests:
         - pip
         - pytest >=8
         - pytest-asyncio
-        - scikit-hep-testdata >=0.4.10
+        - scikit-hep-testdata >=0.5
     script:
-      - curl -LO https://github.com/scikit-hep/scikit-hep-testdata/raw/v0.4.12/src/skhep_testdata/data/uproot-Event.root
-      - uproot-browser plot uproot-Event.root:hstat
+      - uproot-browser plot --testdata uproot-Event.root:hstat
       - pytest
 
 about:
