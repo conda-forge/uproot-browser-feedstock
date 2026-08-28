@@ -32,7 +32,7 @@ requirements:
     - hist >=2.6
     - lz4 >=2
     - numpy >=1.18
-    - plotext >=5.2.8
+    - plotext >=5.2.8,<6
     - python >=${{ python_min }}
     - rich >=13.3.3
     - textual >=0.86
@@ -44,7 +44,9 @@ tests:
       imports:
         - uproot_browser
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - files:
       source:
         - tests
