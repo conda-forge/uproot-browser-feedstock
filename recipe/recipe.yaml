@@ -1,6 +1,6 @@
 context:
   name: uproot-browser
-  version: "0.9.0"
+  version: "0.9.1"
   python_min: '3.10'
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/uproot_browser-${{ version }}.tar.gz
-  sha256: 39efd2371a59ea58f4276d8fc1ebed9f279195952c3222acc7ee473b0ec2ee3d
+  sha256: dae9fa45c45cec6a4fcb7b0e560ee1fa990017c6505b375637d56517792330c6
 
 build:
   number: 0
@@ -32,7 +32,7 @@ requirements:
     - hist >=2.6
     - lz4 >=2
     - numpy >=1.18
-    - plotext >=5.2.8
+    - plotext >=5.2.8,<6
     - python >=${{ python_min }}
     - rich >=13.3.3
     - textual >=0.86
@@ -44,7 +44,9 @@ tests:
       imports:
         - uproot_browser
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - files:
       source:
         - tests
