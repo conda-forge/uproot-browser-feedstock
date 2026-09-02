@@ -1,20 +1,19 @@
 context:
-  name: uproot-browser
   version: "0.10.0"
   python_min: '3.10'
 
 package:
-  name: ${{ name|lower }}
+  name: uproot-browser
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/uproot_browser-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/u/uproot-browser/uproot_browser-${{ version }}.tar.gz
   sha256: 7b8ff94df903c358497a8fa582dd163bdf1eb3922c7ceb4f8f2e3af50762cb05
 
 build:
   number: 0
   noarch: python
-  script: python -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv
   python:
     entry_points:
       - uproot-browser = uproot_browser.__main__:main
@@ -54,7 +53,6 @@ tests:
     requirements:
       run:
         - python ${{ python_min }}.*
-        - pip
         - pytest >=8
         - pytest-asyncio
         - scikit-hep-testdata >=0.5
@@ -66,7 +64,8 @@ about:
   summary: Tools to inspect ROOT files with uproot
   license: BSD-3-Clause
   license_file: LICENSE
-  homepage: https://pypi.org/project/uproot-browser/
+  homepage: https://github.com/scikit-hep/uproot-browser
+  repository: https://github.com/scikit-hep/uproot-browser
 
 extra:
   recipe-maintainers:
