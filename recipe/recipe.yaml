@@ -1,6 +1,6 @@
 context:
   name: uproot-browser
-  version: "0.9.1"
+  version: "0.10.0"
   python_min: '3.10'
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/uproot_browser-${{ version }}.tar.gz
-  sha256: dae9fa45c45cec6a4fcb7b0e560ee1fa990017c6505b375637d56517792330c6
+  sha256: 7b8ff94df903c358497a8fa582dd163bdf1eb3922c7ceb4f8f2e3af50762cb05
 
 build:
   number: 0
