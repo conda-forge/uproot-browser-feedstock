@@ -3,11 +3,13 @@ About uproot-browser-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/uproot-browser-feedstock/blob/main/LICENSE.txt)
 
-Home: https://pypi.org/project/uproot-browser/
+Home: https://github.com/scikit-hep/uproot-browser
 
 Package license: BSD-3-Clause
 
 Summary: Tools to inspect ROOT files with uproot
+
+Development: https://github.com/scikit-hep/uproot-browser
 
 Current build status
 ====================
