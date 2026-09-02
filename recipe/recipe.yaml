@@ -31,7 +31,7 @@ requirements:
     - hist >=2.6
     - lz4 >=2
     - numpy >=1.18
-    - plotext >=5.2.8,<6
+    - plotext >=5.2.8
     - python >=${{ python_min }}
     - rich >=13.3.3
     - textual >=0.86
