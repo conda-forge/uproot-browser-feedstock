@@ -34,7 +34,6 @@ requirements:
     - python >=${{ python_min }}
     - rich >=13.3.3
     - textual >=0.86
-    - typing_extensions
     - uproot >=5.6.1
 
 tests:
